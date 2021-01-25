@@ -1,0 +1,9 @@
+{
+    "name": "game-of-three-client",
+    "version": "0.0.1",
+    "description": "Client part for a small game of numbers",
+    "main": "index.js",
+    "repository": "https://github.com/markoffden/game-of-three-client.git",
+    "author": "markoffden",
+    "license": "MIT"
+}
