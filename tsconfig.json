@@ -1,0 +1,51 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "esnext",
+        "jsx": "react",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "experimentalDecorators": true,
+        "sourceMap": true,
+        "allowJs": true,
+        "noEmit": true,
+        "strict": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitAny": true,
+        "baseUrl": "src",
+        "paths": {
+            "#/domains/*": [
+                "domains/*"
+            ],
+            "#/shared/*": [
+                "shared/*"
+            ],
+            "#/store": [
+                "store"
+            ],
+            "#/store/*": [
+                "store/*"
+            ],
+            "#/pages/*": [
+                "pages/*"
+            ],
+            "#/static/*": [
+                "static/*"
+            ],
+            "#/i18n": [
+                "i18n"
+            ]
+        }
+    },
+    "include": [
+        "src",
+        "typings"
+    ],
+    "exclude": [
+        "node_modules",
+        "build"
+    ]
+}
