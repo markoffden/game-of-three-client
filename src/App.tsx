@@ -1,13 +1,20 @@
-import React, { FunctionComponent } from 'react';
-import Game from './domains/game/containers/Game';
+import React, { FunctionComponent, StrictMode } from 'react';
+import { Provider } from 'react-redux';
+import Game from './containers/Game';
 import GlobalStyle from './global-styled';
+import socket from './socket';
+import { configStore } from './store';
+
+const store = configStore(socket);
 
 const App: FunctionComponent = () => {
     return (
-        <>
-            <GlobalStyle />
-            <Game />
-        </>
+        <StrictMode>
+            <Provider store={store}>
+                <GlobalStyle />
+                <Game />
+            </Provider>
+        </StrictMode>
     );
 };
 

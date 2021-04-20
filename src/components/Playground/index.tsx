@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
-import PlaygroundHeader from '../../components/PlaygroundHeader';
-import PlaygroundMain from '../../components/PlaygroundMain';
-import PlaygroundFooter from '../../components/PlaygroundFooter';
+import PlaygroundHeader from '../PlaygroundHeader';
+import PlaygroundMain from '../PlaygroundMain';
+import PlaygroundFooter from '../PlaygroundFooter';
 
 const Playground: FunctionComponent = () => {
     return (

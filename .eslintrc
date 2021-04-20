@@ -28,10 +28,6 @@
                     "info"
                 ]
             }
-        ],
-        "arrow-parens": [
-            "error",
-            "as-needed"
         ]
     }
 }

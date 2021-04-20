@@ -6,6 +6,10 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const { version } = require('./package');
 const srcPath = path.resolve(__dirname, './src');
 const buildPath = path.resolve(__dirname, './build');
+const webpack = require('webpack');
+const dotenv = require('dotenv').config({
+    path: path.join(__dirname, '.env'),
+});
 /* eslint-enable @typescript-eslint/no-var-requires */
 
 module.exports = {
@@ -24,6 +28,14 @@ module.exports = {
                 use: 'babel-loader',
                 exclude: /node_modules/,
             },
+            {
+                test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+                type: 'asset/resource',
+            },
+            {
+                test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+                type: 'asset/inline',
+            },
         ],
     },
     plugins: [
@@ -41,6 +53,9 @@ module.exports = {
                     syntactic: true,
                 },
             },
+        }),
+        new webpack.DefinePlugin({
+            'process.env': JSON.stringify(dotenv.parsed),
         }),
     ],
     resolve: {
